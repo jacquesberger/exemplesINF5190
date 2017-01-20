@@ -14,4 +14,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-print "Hello World!"
+import random
+
+print "Nouvelle partie de HILO"
+mystery_number = random.randint(1, 100)
+
+tries = 10
+found = False
+while tries > 0 and found == False:
+    print "Entrez un nombre entre 1 et 100"
+    user_number = int(raw_input())
+    if user_number < mystery_number:
+        print "Plus haut!"
+    elif user_number > mystery_number:
+        print "Plus bas!"
+    else:
+        found = True
+    tries = tries - 1
+
+if found == True:
+    print "Vous avez gagné!"
+else:
+    print "Vous avez perdu!"
