@@ -24,3 +24,6 @@ def get_today():
     return datetime.date.today()
 
 print_error_message("Out of memory")
+
+new_function = get_today;
+print new_function()
