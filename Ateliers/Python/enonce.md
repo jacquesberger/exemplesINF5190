@@ -16,7 +16,14 @@ Exercice
 --------
 
 Vous devez faire un logiciel qui lira un ensemble de commandes d'articles dans
-un fichier et qui créera des factures pour les clients concernés.
+un fichier et qui créera des factures pour les clients concernés à l'aide des
+éléments de Python vus en classe :
+* fichiers;
+* conditions;
+* boucles;
+* classes;
+* listes;
+* dictionnaires.
 
 Voici un exemple de fichier d'entrée :
 ```
