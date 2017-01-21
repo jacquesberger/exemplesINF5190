@@ -50,7 +50,7 @@ Voici un exemple de facture à produire :
 ```
 Client numéro 0001
 
-              No de produit	 Qte		Prix		Total (tx)
+              No de produit  Qte    Prix    Total (tx)
 Produit #1    RTU43245         3     69.99      241.41
 Produit #2    RCU83364         1    169.99      178.49
 Produit #3    POP64483        12      1.99       26.26
