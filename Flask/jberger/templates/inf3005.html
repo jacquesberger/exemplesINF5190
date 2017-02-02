@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INF3005 - Programmation web avancée</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">jberger.org</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cours <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/inf1256/">INF1256 - Informatique pour les sciences de la gestion</a></li>
+            <li><a href="/inf2015/">INF2015 - Développement de logiciels dans un environnement Agile</a></li>
+            <li><a href="/inf2005/">INF2005 - Programmation web</a></li>
+            <li><a href="/inf3005/">INF3005 - Programmation web avancée</a></li>
+            <li><a href="/inf3135/">INF3135 - Construction et maintenance de logiciels</a></li>
+            <li><a href="/inf3172/">INF3172 - Principes des systèmes d'exploitation</a></li>
+            <li><a href="/inf3180/">INF3180 - Fichiers et bases de données</a></li>
+            <li><a href="/inf4150/">INF4150 - Interfaces personnes-machines</a></li>
+            <li><a href="/inf4170/">INF4170 - Architecture des ordinateurs</a></li>
+            <li><a href="/inf4375/">INF4375 - Paradigmes des échances Internet</a></li>
+            <li><a href="/inf5153/">INF5153 - Génie logiciel : conception</a></li>
+            <li><a href="/inm5151/">INM5151 - Projet d'analyse et de modélisation</a></li>
+            <li><a href="/mgl7460/">MGL7460 - Réalisation et maintenance des logiciels</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://twitter.com/jacquesberger">
+              <img alt="Twitter Logo" src="/img/Twitter_Logo_White_On_Blue.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.facebook.com/jacquesbergerTI/">
+              <img alt="Facebook Logo" src="/img/FB-f-Logo__blue_512.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://ca.linkedin.com/in/jacquesberger">
+              <img alt="LinkedIn Logo" src="/img/In-2C-128px-TM.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.instagram.com/jacquesberger/">
+              <img alt="Instagram Logo" src="/img/glyph-logo_May2016.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://github.com/jacquesberger">
+              <img alt="Github Logo" src="/img/GitHub-Mark-120px-plus.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 text-center page-header">
+          <h1>Programmation web avancée</h1>
+          <p>INF3005-50 Hiver 2017</p>
+          <p>Moniteur : Philippe Pépos-Petitclerc</p>
+          <p><a href="material/PlanDeCours.pdf">Plan de cours</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="h3 text-center">Calendrier</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Semaine</th>
+                <th>Dates</th>
+                <th>Contenu</th>
+                <th>Laboratoire</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 13 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 9 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Introduction.pdf">Introduction</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 20 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 16 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Python.pdf">Python</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 27 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 23 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Python-partie2.pdf">Python - partie 2</a></li>
+                    <li><a href="/notes/files/INF3005-BD.pdf">Utilisation d'une base de données</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="https://github.com/jacquesberger/exemplesINF3005/blob/master/Ateliers/Python/enonce.md">Introduction à Python</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 3 février 2017</li>
+                    <li class="text-muted small">Atelier : 30 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>PEP8</li>
+                    <li>Flask</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="https://github.com/jacquesberger/exemplesINF3005/blob/master/Ateliers/BD/enonce.md">SQLite avec Python</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 10 février 2017</li>
+                    <li class="text-muted small">Atelier : 6 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Énoncé TP1</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 17 février 2017</li>
+                    <li class="text-muted small">Atelier : 13 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Préparation à l'examen</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 24 février 2017</li>
+                    <li class="text-muted small">Atelier : 20 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Examen intra</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 3 mars 2017</li>
+                    <li class="text-muted small">Atelier : 27 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Semaine de relâche</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 10 mars 2017</li>
+                    <li class="text-muted small">Atelier : 6 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Remise TP1</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 17 mars 2017</li>
+                    <li class="text-muted small">Atelier : 13 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 24 mars 2017</li>
+                    <li class="text-muted small">Atelier : 20 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 31 mars 2017</li>
+                    <li class="text-muted small">Atelier : 27 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Énoncé TP2</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 7 avril 2017</li>
+                    <li class="text-muted small">Atelier : 3 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 14 avril 2017</li>
+                    <li class="text-muted small">Atelier : 10 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Congé férié</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 21 avril 2017</li>
+                    <li class="text-muted small">Atelier : 17 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Préparation à l'examen</li>
+                    <li>Remise TP2</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Congé férié</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 28 avril 2017</li>
+                    <li class="text-muted small">Atelier : 24 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Examen final</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 text-center page-footer">
+          <p class="h3">Matériel complémentaire</p>
+          <p><a href="https://github.com/jacquesberger/exemplesINF3005">Exemples</a></p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:3em">
+        <div class="col-xs-12 text-center page-footer">
+          <p>&copy; Jacques Berger <strong>2017</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
