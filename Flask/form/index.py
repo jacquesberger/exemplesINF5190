@@ -40,6 +40,9 @@ def donnees_formulaire():
     print request.form['salary']
     print request.form['publicity']
     print request.form['rating']
+    # Excellent endroit pour valider les données et les sauvegarder dans une
+    # base de données.
+    # Prévoir une route pour afficher les erreurs.
     return redirect('/merci')
 
 
