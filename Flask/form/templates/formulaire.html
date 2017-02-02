@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Questionnaire</title>
+</head>
+<body>
+	<form action="/envoyer" method="post">
+		<div>
+			<table>
+				<tr>
+					<td><label for="nom">Nom :</label>
+					</td>
+					<td><input type="text" id="nom" name="name" size="40">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="prenom">Prénom :</label>
+					</td>
+					<td><input type="text" id="prenom" name="fname" size="40">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="jour">Date de naissance :</label>
+					</td>
+					<td><select id="jour" name="birthday">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+					</select> <select name="birthmonth">
+							<option value="1">Janvier</option>
+							<option value="2">Février</option>
+							<option value="3">Mars</option>
+							<option value="4">Avril</option>
+							<option value="5">Mai</option>
+							<option value="6">Juin</option>
+							<option value="7">Juillet</option>
+							<option value="8">Août</option>
+							<option value="9">Septembre</option>
+							<option value="10">Octobre</option>
+							<option value="11">Novembre</option>
+							<option value="12">Décembre</option>
+					</select> <input type="text" name="birthyear" size="4">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="courriel">Courriel :</label>
+					</td>
+					<td><input type="text" id="courriel" name="email" size="60">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="usager">Nom d'utilisateur :</label>
+					</td>
+					<td><input type="text" id="usager" name="username" size="30">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="motdepasse">Mot de passe :</label>
+					</td>
+					<td><input type="password" id="motdepasse" name="password"
+						size="30">
+					</td>
+				</tr>
+			</table>
+			<br>
+			<span>Votre salaire annuel :</span><br> 
+			<input type="radio" name="salary" value="1" checked="checked">
+			<span>Moins	de 20 000$</span><br>
+			<input type="radio" name="salary" value="2">
+			<span>20 000$ à 29 999$</span><br>
+			<input type="radio" name="salary" value="3">
+			<span>30 000$ à 39 999$</span><br>
+			<input type="radio" name="salary" value="4">
+			<span>Plus de 40 000$</span><br>
+			<br>
+			<input type="checkbox" checked="checked" name="publicity" value="1">
+			<span>Cochez cette case pour recevoir des offres promotionnelles</span>
+			<br>
+			<input type="hidden" name="rating" value="good">
+			<input type="reset" value="Vider">
+			<input type="submit" value="Envoyer">
+		</div>
+	</form>
+</body>
+</html>
