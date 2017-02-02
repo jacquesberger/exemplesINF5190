@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 class Person(object):
     def __init__(self, firstname, lastname, age):
         self.firstname = firstname
@@ -23,13 +24,16 @@ class Person(object):
     def get_complete_name(self):
         return "%s %s" % (self.firstname, self.lastname)
 
+
 class Student(Person):
     def __init__(self, firstname, lastname, age, code):
         super(Student, self).__init__(firstname, lastname, age)
         self.code = code
 
     def get_complete_name(self):
-        return "%s [%s]" % (super(Student, self).get_complete_name(), self.code)
+        return "%s [%s]" % (super(Student, self).get_complete_name(),
+                            self.code)
+
 
 class Teacher(Person):
     def __init__(self, firstname, lastname, age, employee_number):

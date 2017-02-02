@@ -21,7 +21,7 @@ mystery_number = random.randint(1, 100)
 
 tries = 10
 found = False
-while tries > 0 and found == False:
+while tries > 0 and found is False:
     print "Entrez un nombre entre 1 et 100"
     user_number = int(raw_input())
     if user_number < mystery_number:
@@ -32,7 +32,7 @@ while tries > 0 and found == False:
         found = True
     tries = tries - 1
 
-if found == True:
+if found is True:
     print "Vous avez gagné!"
 else:
     print "Vous avez perdu!"

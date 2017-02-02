@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-une_liste = ["Pascal", "SQL", "PHP", "Python", "Ruby", "Groovy", "Java", "Javascript"]
+une_liste = ["Pascal", "SQL", "PHP", "Python",
+             "Ruby", "Groovy", "Java", "Javascript"]
 
 # Boucler sur une liste
 for each in une_liste:
