@@ -14,8 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 
 app = Flask(__name__, static_url_path="", static_folder="static")
 
