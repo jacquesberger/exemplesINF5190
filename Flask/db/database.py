@@ -36,3 +36,9 @@ class Database:
         cursor.execute("select nom from artiste")
         artists = cursor.fetchall()
         return [artist[0] for artist in artists]
+
+    def get_albums(self):
+        cursor = self.get_connection().cursor()
+        cursor.execute("select titre from album")
+        albums = cursor.fetchall()
+        return [album[0] for album in albums]

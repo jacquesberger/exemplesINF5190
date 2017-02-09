@@ -45,3 +45,10 @@ def start_page():
 def show_list():
     artists = get_db().get_artists()
     return render_template('artistes.html', artists=artists)
+
+
+@app.route('/deux-listes')
+def show_two_lists():
+    artists = get_db().get_artists()
+    albums = get_db().get_albums()
+    return render_template('2listes.html', artists=artists, albums=albums)

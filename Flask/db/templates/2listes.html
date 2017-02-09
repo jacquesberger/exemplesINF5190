@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Liste</title>
+</head>
+<body>
+  <h1>Artistes</h1>
+  <ul>
+    {% for artist in artists %}
+        <li>{{ artist }}</li>
+    {% endfor %}
+  </ul>
+  <h2>Albums</h2>
+  <ul>
+    {% for album in albums %}
+        <li>{{ album }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
