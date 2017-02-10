@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Artiste</title>
+</head>
+<body>
+  <h1>Nouvel artiste</h1>
+  {% if erreur %}
+    <p style="color:#700">{{ erreur }}</p>
+  {% endif %}
+  <form action="/new" method="post">
+    <div>
+      Nom : <input type="text" name="nom"><br>
+      <input type="submit" name="bouton" value="Créer">
+    </div>
+  </form>
+</body>
+</html>

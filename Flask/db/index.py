@@ -17,6 +17,8 @@
 from flask import Flask
 from flask import render_template
 from flask import g
+from flask import request
+from flask import redirect
 from database import Database
 
 app = Flask(__name__)
@@ -59,3 +61,18 @@ def show_two_empty_lists():
     artists = []
     albums = []
     return render_template('2listes-vides.html', artists=artists, albums=albums)
+
+
+@app.route('/formulaire')
+def show_form():
+    return render_template('form.html')
+
+
+@app.route('/new', methods=['POST'])
+def post_form():
+    name = request.form['nom']
+    if len(name) == 0:
+        return render_template('form.html', erreur='Le nom est obligatoire')
+    else:
+        get_db().insert_artist(name)
+        return redirect('/liste')
