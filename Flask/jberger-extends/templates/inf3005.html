@@ -1,0 +1,341 @@
+{% extends "layout.html" %}
+{% block content %}      
+      <div class="row">
+        <div class="col-xs-12 text-center page-header">
+          <h1>Programmation web avancée</h1>
+          <p>INF3005-50 Hiver 2017</p>
+          <p>Moniteur : Philippe Pépos-Petitclerc</p>
+          <p><a href="material/PlanDeCours.pdf">Plan de cours</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="h3 text-center">Calendrier</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Semaine</th>
+                <th>Dates</th>
+                <th>Contenu</th>
+                <th>Laboratoire</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 13 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 9 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Introduction.pdf">Introduction</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 20 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 16 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Python.pdf">Python</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 27 janvier 2017</li>
+                    <li class="text-muted small">Atelier : 23 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="/notes/files/INF3005-Python-partie2.pdf">Python - partie 2</a></li>
+                    <li><a href="/notes/files/INF3005-BD.pdf">Utilisation d'une base de données</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="https://github.com/jacquesberger/exemplesINF3005/blob/master/Ateliers/Python/enonce.md">Introduction à Python</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 3 février 2017</li>
+                    <li class="text-muted small">Atelier : 30 janvier 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>PEP8</li>
+                    <li>Flask</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li><a href="https://github.com/jacquesberger/exemplesINF3005/blob/master/Ateliers/BD/enonce.md">SQLite avec Python</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 10 février 2017</li>
+                    <li class="text-muted small">Atelier : 6 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Énoncé TP1</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 17 février 2017</li>
+                    <li class="text-muted small">Atelier : 13 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Préparation à l'examen</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 24 février 2017</li>
+                    <li class="text-muted small">Atelier : 20 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Examen intra</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 3 mars 2017</li>
+                    <li class="text-muted small">Atelier : 27 février 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Semaine de relâche</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 10 mars 2017</li>
+                    <li class="text-muted small">Atelier : 6 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Remise TP1</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 17 mars 2017</li>
+                    <li class="text-muted small">Atelier : 13 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 24 mars 2017</li>
+                    <li class="text-muted small">Atelier : 20 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 31 mars 2017</li>
+                    <li class="text-muted small">Atelier : 27 mars 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Énoncé TP2</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 7 avril 2017</li>
+                    <li class="text-muted small">Atelier : 3 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 14 avril 2017</li>
+                    <li class="text-muted small">Atelier : 10 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Congé férié</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 21 avril 2017</li>
+                    <li class="text-muted small">Atelier : 17 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>À déterminer</li>
+                    <li>Préparation à l'examen</li>
+                    <li>Remise TP2</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Congé férié</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li class="text-muted small">Cours : 28 avril 2017</li>
+                    <li class="text-muted small">Atelier : 24 avril 2017</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Examen final</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>Aucun</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+{% endblock %}

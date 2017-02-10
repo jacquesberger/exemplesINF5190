@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jacques Berger - enseignant, développeur et musicien</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">jberger.org</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cours <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/inf1256/">INF1256 - Informatique pour les sciences de la gestion</a></li>
+            <li><a href="/inf2015/">INF2015 - Développement de logiciels dans un environnement Agile</a></li>
+            <li><a href="/inf2005/">INF2005 - Programmation web</a></li>
+            <li><a href="/inf3005/">INF3005 - Programmation web avancée</a></li>
+            <li><a href="/inf3135/">INF3135 - Construction et maintenance de logiciels</a></li>
+            <li><a href="/inf3172/">INF3172 - Principes des systèmes d'exploitation</a></li>
+            <li><a href="/inf3180/">INF3180 - Fichiers et bases de données</a></li>
+            <li><a href="/inf4150/">INF4150 - Interfaces personnes-machines</a></li>
+            <li><a href="/inf4170/">INF4170 - Architecture des ordinateurs</a></li>
+            <li><a href="/inf4375/">INF4375 - Paradigmes des échances Internet</a></li>
+            <li><a href="/inf5153/">INF5153 - Génie logiciel : conception</a></li>
+            <li><a href="/inm5151/">INM5151 - Projet d'analyse et de modélisation</a></li>
+            <li><a href="/mgl7460/">MGL7460 - Réalisation et maintenance des logiciels</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://twitter.com/jacquesberger">
+              <img alt="Twitter Logo" src="/img/Twitter_Logo_White_On_Blue.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.facebook.com/jacquesbergerTI/">
+              <img alt="Facebook Logo" src="/img/FB-f-Logo__blue_512.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://ca.linkedin.com/in/jacquesberger">
+              <img alt="LinkedIn Logo" src="/img/In-2C-128px-TM.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://www.instagram.com/jacquesberger/">
+              <img alt="Instagram Logo" src="/img/glyph-logo_May2016.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://github.com/jacquesberger">
+              <img alt="Github Logo" src="/img/GitHub-Mark-120px-plus.png" style="width:auto; height:auto; max-width:24px;">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container-fluid">
+
+      {% block content %}{% endblock %}
+
+      <div class="row" style="margin-top:3em">
+        <div class="col-xs-12 text-center">
+          <p>&copy; Jacques Berger <strong>2016</strong></p>
+        </div>
+      </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
