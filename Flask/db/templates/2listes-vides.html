@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Liste</title>
+</head>
+<body>
+  <h1>Artistes</h1>
+  {% if not artists %}
+    <p>Aucun artiste.</p>
+  {% else %}
+    <ul>
+      {% for artist in artists %}
+          <li>{{ artist }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <h2>Albums</h2>
+  {% if not albums %}
+    <p>Aucun album.</p>
+  {% else %}
+    <ul>
+      {% for album in albums %}
+          <li>{{ album }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>

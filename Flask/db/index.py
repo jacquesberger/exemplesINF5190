@@ -52,3 +52,10 @@ def show_two_lists():
     artists = get_db().get_artists()
     albums = get_db().get_albums()
     return render_template('2listes.html', artists=artists, albums=albums)
+
+
+@app.route('/vide')
+def show_two_empty_lists():
+    artists = []
+    albums = []
+    return render_template('2listes-vides.html', artists=artists, albums=albums)
