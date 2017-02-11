@@ -31,3 +31,5 @@ Exercices
    Assurez-vous de ne pas perdre les données du formulaire dans le processus
    (lorsqu'on affiche le formulaire avec le message d'erreur, les valeurs du
    formulaire doivent être dans les champs du formulaire).
+
+4. La liste de personnes doit être triée en ordre croissant de nom de famille.
