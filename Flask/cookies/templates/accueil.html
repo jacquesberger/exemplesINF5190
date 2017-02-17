@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Liste</title>
+</head>
+<body>
+  <h1>Bonsoir!</h1>
+  <p>Voici la liste des artistes</p>
+  <ul>
+    {% for artist in artists %}
+      <li><a href="/artiste/{{ artist.id }}">{{ artist.nom }}</a></li>
+    {% endfor %}
+  </ul>
+  {% if last %}
+    <p>Le dernier artiste visité est <a href="/artiste/{{ last.id }}">{{ last.nom }}</a>.</p>
+  {% endif %}
+</body>
+</html>

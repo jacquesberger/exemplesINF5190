@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ artist.nom }}</title>
+</head>
+<body>
+  <h1>Bonsoir, fan de {{ artist.nom }}!</h1>
+  {% if artist.est_solo %}
+    <p>Il s'agit d'un artiste solo.</p>
+  {% else %}
+    <p>Il s'agit d'un groupe.</p>
+    <p>Le groupe est composé de {{ artist.nombre_individus }} personnes.</p>
+  {% endif %}
+  <p><a href="/">Retour</a></p>
+</body>
+</html>
