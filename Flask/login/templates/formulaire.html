@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Création d'un compte</h1>
+  {% if error %}
+    <p style="color:#F00">Tous les champs sont obligatoires. Veuillez recommencer.</p>
+  {% endif %}
+  <form action="/formulaire" method="POST">
+    <label for="champ_username">Nom d'utilisateur</label>&nbsp;<input type="text" id="champ_username" name="username" maxlength="20">
+    <br>
+    <label for="champ_password">Mot de passe</label>&nbsp;<input type="password" id="champ_password" name="password" maxlength="40">
+    <br>
+    <input type="submit" value="Soumettre">
+  </form>
+{% endblock %}
