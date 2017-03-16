@@ -99,7 +99,10 @@ def log_user():
 
 @app.route('/logout')
 def logout():
-    session.pop('id', None)
+    if session.has_key("id"):
+        id_session = session["id"]
+        session.pop('id', None)
+        get_db().delete_session(id_session)
     return redirect("/")
 
 app.secret_key = "(*&*&322387he738220)(*(*22347657"
