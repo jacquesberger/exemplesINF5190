@@ -2,12 +2,16 @@
 {% block content %}      
   <h1>Bonsoir!</h1>
   <p><a href="/formulaire">Cliquez ici pour créer un compte</a></p>
-  <p>Vous n'êtes pas connecté.</p>
-  <form action="/login" method="POST">
-    <label for="champ_username">Nom d'utilisateur</label>&nbsp;<input type="text" id="champ_username" name="username" maxlength="20">
-    <br>
-    <label for="champ_password">Mot de passe</label>&nbsp;<input type="password" id="champ_password" name="password" maxlength="40">
-    <br>
-    <input type="submit" value="Se connecter">
-  </form>
+  {% if username %}
+    <p>Vous êtes connecté en tant que {{ username }}.</p>
+  {% else %}
+    <p>Vous n'êtes pas connecté.</p>
+    <form action="/login" method="POST">
+      <label for="champ_username">Nom d'utilisateur</label>&nbsp;<input type="text" id="champ_username" name="username" maxlength="20">
+      <br>
+      <label for="champ_password">Mot de passe</label>&nbsp;<input type="password" id="champ_password" name="password" maxlength="40">
+      <br>
+      <input type="submit" value="Se connecter">
+    </form>
+  {% endif %}
 {% endblock %}      

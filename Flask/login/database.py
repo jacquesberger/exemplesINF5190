@@ -46,3 +46,19 @@ class Database:
             return None
         else:
             return user[0], user[1]
+    
+    def save_session(self, id_session, username):
+        connection = self.get_connection()
+        connection.execute(("insert into sessions(id_session, utilisateur) "
+                    "values(?, ?)"), (id_session, username))
+        connection.commit()
+    
+    def get_session(self, id_session):
+        cursor = self.get_connection().cursor()
+        cursor.execute(("select utilisateur from sessions where id_session=?"),
+                       (id_session,))
+        data = cursor.fetchone()
+        if data is None:
+            return None
+        else:
+            return data[0]

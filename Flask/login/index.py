@@ -19,6 +19,7 @@ from flask import render_template
 from flask import g
 from flask import request
 from flask import redirect
+from flask import session
 from database import Database
 import hashlib
 import uuid
@@ -42,7 +43,11 @@ def close_connection(exception):
 
 @app.route('/')
 def start_page():
-    return render_template('accueil.html')
+    id_session = session["id"]
+    username = None
+    if id_session is not None:
+        username = get_db().get_session(id_session)
+    return render_template('accueil.html', username=username)
 
 
 @app.route('/confirmation')
@@ -86,7 +91,11 @@ def log_user():
     hashed_password = hashlib.sha512(password + salt).hexdigest()
     if hashed_password == user[1]:
         # Accès autorisé
-        print "Autorisé"
-        return ""
+        id_session = uuid.uuid4().hex
+        get_db().save_session(id_session, username)
+        session["id"] = id_session
+        return redirect("/")
     else:
         return redirect("/")
+
+app.secret_key = "(*&*&322387he738220)(*(*22347657"
