@@ -43,10 +43,9 @@ def close_connection(exception):
 
 @app.route('/')
 def start_page():
-    id_session = session["id"]
     username = None
-    if id_session is not None:
-        username = get_db().get_session(id_session)
+    if session.has_key("id"):
+        username = get_db().get_session(session["id"])
     return render_template('accueil.html', username=username)
 
 
@@ -97,5 +96,10 @@ def log_user():
         return redirect("/")
     else:
         return redirect("/")
+
+@app.route('/logout')
+def logout():
+    session.pop('id', None)
+    return redirect("/")
 
 app.secret_key = "(*&*&322387he738220)(*(*22347657"

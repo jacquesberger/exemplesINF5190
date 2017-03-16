@@ -53,6 +53,11 @@ class Database:
                     "values(?, ?)"), (id_session, username))
         connection.commit()
     
+    def delete_session(self, id_session):
+        connection = self.get_connection()
+        connection.execute(("delete from sessions where id_session=?"), (id_session,))
+        connection.commit()
+    
     def get_session(self, id_session):
         cursor = self.get_connection().cursor()
         cursor.execute(("select utilisateur from sessions where id_session=?"),

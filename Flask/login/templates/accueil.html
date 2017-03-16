@@ -4,6 +4,7 @@
   <p><a href="/formulaire">Cliquez ici pour créer un compte</a></p>
   {% if username %}
     <p>Vous êtes connecté en tant que {{ username }}.</p>
+    <p><a href="/logout">Se déconnecter</a></p>
   {% else %}
     <p>Vous n'êtes pas connecté.</p>
     <form action="/login" method="POST">
