@@ -46,7 +46,7 @@ def close_connection(exception):
 @app.route('/')
 def start_page():
     username = None
-    if session.has_key("id"):
+    if "id" in session:
         username = get_db().get_session(session["id"])
     return render_template('accueil.html', username=username)
 
@@ -66,7 +66,8 @@ def formulaire_creation():
         email = request.form["email"]
         # Vérifier que les champs ne sont pas vides
         if username == "" or password == "" or email == "":
-            return render_template("formulaire.html", error="Tous les champs sont obligatoires.")
+            return render_template("formulaire.html",
+                                   error="Tous les champs sont obligatoires.")
 
         # TODO Faire la validation du formulaire
         salt = uuid.uuid4().hex
@@ -87,7 +88,7 @@ def log_user():
 
     user = get_db().get_user_login_info(username)
     if user is None:
-      return redirect("/")
+        return redirect("/")
 
     salt = user[0]
     hashed_password = hashlib.sha512(password + salt).hexdigest()
@@ -100,6 +101,7 @@ def log_user():
     else:
         return redirect("/")
 
+
 def authentication_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -108,23 +110,25 @@ def authentication_required(f):
         return f(*args, **kwargs)
     return decorated
 
+
 @app.route('/logout')
 @authentication_required
 def logout():
-    if session.has_key("id"):
+    if "id" in session:
         id_session = session["id"]
         session.pop('id', None)
         get_db().delete_session(id_session)
     return redirect("/")
 
+
 def is_authenticated(session):
-    return session.has_key("id")
+    return "id" in session
+
 
 def send_unauthorized():
-    return Response(
-    'Could not verify your access level for that URL.\n'
-    'You have to login with proper credentials', 401,
-    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+    return Response('Could not verify your access level for that URL.\n'
+                    'You have to login with proper credentials', 401,
+                    {'WWW-Authenticate': 'Basic realm="Login Required"'})
 
 
 app.secret_key = "(*&*&322387he738220)(*(*22347657"

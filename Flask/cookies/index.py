@@ -55,6 +55,7 @@ def artist_page(identifier):
     if artist is None:
         return render_template('404.html'), 404
     else:
-        response = make_response(render_template('artiste.html', artist=artist))
+        response = make_response(render_template('artiste.html',
+                                                 artist=artist))
         response.set_cookie("last", identifier)
         return response

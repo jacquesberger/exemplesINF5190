@@ -19,7 +19,8 @@ import sqlite3
 
 
 def build_artist_dictionary(row):
-    return {"id":row[0], "nom":row[1], "est_solo":row[2], "nombre_individus":row[3]}
+    return {"id": row[0], "nom": row[1], "est_solo": row[2],
+            "nombre_individus": row[3]}
 
 
 class Database:
@@ -37,14 +38,16 @@ class Database:
 
     def get_artists(self):
         cursor = self.get_connection().cursor()
-        cursor.execute("select id, nom, est_solo, nombre_individus from artiste")
+        cursor.execute(("select id, nom, est_solo,"
+                        " nombre_individus from artiste"))
         artists = cursor.fetchall()
         return [build_artist_dictionary(each) for each in artists]
 
     def get_artist(self, identifier):
         cursor = self.get_connection().cursor()
         print identifier
-        cursor.execute("select id, nom, est_solo, nombre_individus from artiste where id = ?", (identifier,))
+        cursor.execute(("select id, nom, est_solo, nombre_individus "
+                        "from artiste where id = ?"), (identifier,))
         artist = cursor.fetchone()
         if artist is None:
             return None

@@ -60,7 +60,8 @@ def show_two_lists():
 def show_two_empty_lists():
     artists = []
     albums = []
-    return render_template('2listes-vides.html', artists=artists, albums=albums)
+    return render_template('2listes-vides.html',
+                           artists=artists, albums=albums)
 
 
 @app.route('/formulaire')
