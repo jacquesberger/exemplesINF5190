@@ -31,10 +31,10 @@ class Database:
         if self.connection is not None:
             self.connection.close()
 
-    def create_user(self, username, salt, hashed_password):
+    def create_user(self, username, email, salt, hashed_password):
         connection = self.get_connection()
-        connection.execute(("insert into users(utilisateur, salt, hash) "
-                    "values(?, ?, ?)"), (username, salt, hashed_password))
+        connection.execute(("insert into users(utilisateur, email, salt, hash) "
+                    "values(?, ?, ?, ?)"), (username, email, salt, hashed_password))
         connection.commit()
 
     def get_user_login_info(self, username):

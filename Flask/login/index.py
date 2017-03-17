@@ -63,15 +63,16 @@ def formulaire_creation():
     else:
         username = request.form["username"]
         password = request.form["password"]
+        email = request.form["email"]
         # Vérifier que les champs ne sont pas vides
-        if username == "" or password == "":
+        if username == "" or password == "" or email == "":
             return render_template("formulaire.html", error="Tous les champs sont obligatoires.")
 
         # TODO Faire la validation du formulaire
         salt = uuid.uuid4().hex
         hashed_password = hashlib.sha512(password + salt).hexdigest()
         db = get_db()
-        db.create_user(username, salt, hashed_password)
+        db.create_user(username, email, salt, hashed_password)
 
         return redirect("/confirmation")
 
