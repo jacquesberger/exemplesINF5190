@@ -20,9 +20,11 @@ from flask import g
 from flask import request
 from flask import redirect
 from flask import session
+from flask import Response
 from database import Database
 import hashlib
 import uuid
+from functools import wraps
 
 app = Flask(__name__)
 
@@ -97,12 +99,31 @@ def log_user():
     else:
         return redirect("/")
 
+def authentication_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not is_authenticated(session):
+            return send_unauthorized()
+        return f(*args, **kwargs)
+    return decorated
+
 @app.route('/logout')
+@authentication_required
 def logout():
     if session.has_key("id"):
         id_session = session["id"]
         session.pop('id', None)
         get_db().delete_session(id_session)
     return redirect("/")
+
+def is_authenticated(session):
+    return session.has_key("id")
+
+def send_unauthorized():
+    return Response(
+    'Could not verify your access level for that URL.\n'
+    'You have to login with proper credentials', 401,
+    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
 
 app.secret_key = "(*&*&322387he738220)(*(*22347657"
