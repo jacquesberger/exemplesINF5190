@@ -30,8 +30,10 @@ d'inscription contenant les champs suivants :
   * courriel;
   * confirmation du courriel (entrer une deuxième fois le courriel);
   * mot de passe (champ texte de type `password`).
+
 Note : il n'y a pas de nom d'utilisateur car on utiliserait l'adresse courriel
 comme nom d'utilisateur.
+
 Lors de la soumission du formulaire, vous devez valider que tous les champs ont
 été remplis, sinon vous affichez un message d'erreur et l'utilisateur doit
 recommencer. Si les données sont valides, vous écrivez les données de
