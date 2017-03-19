@@ -14,7 +14,7 @@ Objectifs
 Exercices
 ---------
 
-1) Créez une base de données servant à stocker les données d'un compte
+1. Créez une base de données servant à stocker les données d'un compte
 utilisateur :
   * nom;
   * prénom;
@@ -23,7 +23,7 @@ utilisateur :
   * salt;
   * haché du mot de passe.
 
-2) Écrivez une application Flask où la page d'accueil est un formulaire
+2. Écrivez une application Flask où la page d'accueil est un formulaire
 d'inscription contenant les champs suivants :
   * nom;
   * prénom;
@@ -39,7 +39,7 @@ recommencer. Si les données sont valides, vous écrivez les données de
 l'utilisateur dans la base de données. La date d'inscription est générée
 automatiquement selon la date du jour.
 
-3) Ajoutez quelques règles de validation au mot de passe :
+3. Ajoutez quelques règles de validation au mot de passe :
   * minimum de 8 caractères;
   * au moins une lettre majuscule et une lettre minuscule;
   * au moins un chiffre
