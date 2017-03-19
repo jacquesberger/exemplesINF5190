@@ -29,6 +29,7 @@ Exercices
    * le premier champ est le nom de l'artiste;
    * le deuxième champ est le nom de l'album;
    * le troisième champ est l'année de publication de l'album.
+
    Les champs sont séparés par un `|`.
 
    Écrivez un programme qui va lire le fichier et ajouter ces albums à la base
