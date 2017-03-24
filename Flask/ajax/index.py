@@ -38,3 +38,13 @@ def close_connection(exception):
 def form():
     pays = get_db().get_pays()
     return render_template('form.html', pays=pays)
+
+@app.route('/provinces/<pays_id>')
+def provinces(pays_id):
+    provinces = get_db().get_provinces(pays_id)
+    return render_template('provinces.html', provinces=provinces)
+
+@app.route('/villes/<province_id>')
+def villes(province_id):
+    villes = get_db().get_villes(province_id)
+    return render_template('villes.html', villes=villes)
