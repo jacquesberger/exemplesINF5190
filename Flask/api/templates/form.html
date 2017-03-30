@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Identité</title>
+<script src="/js/script.js"></script>
+</head>
+<body>
+	<form action="/envoyer" method="post">
+		<div>
+			<table>
+				<tr>
+					<td><label for="champ-nom">Nom :</label>
+					</td>
+					<td><input type="text" id="champ-nom" name="name" size="40">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="champ-prenom">Prénom :</label>
+					</td>
+					<td><input type="text" id="champ-prenom" name="fname" size="40">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="champ-pays">Pays :</label>
+					</td>
+					<td>
+            <select id="champ-pays" name="pays" onchange="onPaysChange();">
+              <option value="">Aucun</option>
+                {% for un_pays in pays %}
+                  <option value="{{ un_pays[0] }}">{{ un_pays[1] }}</li>
+                {% endfor %}
+            </select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="champ-province">Province :</label>
+					</td>
+					<td>
+            <select id="champ-province" name="province" onchange="onProvinceChange();" disabled>
+              <option value="">Aucune</option>
+            </select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="champ-ville">Ville :</label>
+					</td>
+					<td>
+            <select id="champ-ville" name="ville" disabled>
+              <option value="">Aucune</option>
+            </select>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<input type="submit" value="Envoyer">
+		</div>
+	</form>
+</body>
+</html>
