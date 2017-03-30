@@ -60,7 +60,7 @@ def villes(province_id):
 def liste_pays():
     if request.method == "GET":
         pays = get_db().get_pays()
-        data = [{"nom":each[1], "_id":each[0]} for each in pays]
+        data = [{"nom": each[1], "_id": each[0]} for each in pays]
         return jsonify(data)
     else:
         data = request.get_json()
@@ -71,12 +71,12 @@ def liste_pays():
 @app.route('/api/provinces/<pays_id>')
 def liste_provinces(pays_id):
     provinces = get_db().get_provinces(pays_id)
-    data = [{"nom":each[1], "_id":each[0]} for each in provinces]
+    data = [{"nom": each[1], "_id": each[0]} for each in provinces]
     return jsonify(data)
 
 
 @app.route('/api/villes/<province_id>')
 def liste_villes(province_id):
     villes = get_db().get_villes(province_id)
-    data = [{"nom":each[1], "_id":each[0]} for each in villes]
+    data = [{"nom": each[1], "_id": each[0]} for each in villes]
     return jsonify(data)
