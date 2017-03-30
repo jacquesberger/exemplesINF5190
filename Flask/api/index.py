@@ -56,7 +56,7 @@ def villes(province_id):
     return render_template('villes.html', villes=villes)
 
 
-@app.route('/api/pays', methods=["GET", "POST"])
+@app.route('/api/pays/', methods=["GET", "POST"])
 def liste_pays():
     if request.method == "GET":
         pays = get_db().get_pays()

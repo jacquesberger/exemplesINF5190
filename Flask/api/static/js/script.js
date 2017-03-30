@@ -13,6 +13,7 @@
 // limitations under the License.
 
 // Lancée lorsque le champ de pays change. Met à jour la liste des provinces.
+
 function onPaysChange() {
   var champProvince = document.getElementById("champ-province");
 
@@ -68,5 +69,25 @@ function onProvinceChange() {
 
     xhr.open("GET", "/villes/"+province, true);
     xhr.send();
+  }
+}
+
+function sendPays() {
+  var pays = document.getElementById("nouveau_pays").value;
+  if (pays !== "") {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 201) {
+          alert('Pays ajouté à la liste');
+        } else {
+          console.log('Erreur avec le serveur');
+        }
+      }
+    };
+
+    xhr.open("POST", "/api/pays", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify({nom:pays}));
   }
 }
