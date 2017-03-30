@@ -37,6 +37,11 @@ class Database:
         pays = cursor.fetchall()
         return [(un_pays[0], un_pays[1]) for un_pays in pays]
 
+    def add_pays(self, nom):
+        connection = self.get_connection()
+        connection.execute("insert into pays(nom) values(?)", (nom,))
+        connection.commit()
+
     def get_provinces(self, pays_id):
         cursor = self.get_connection().cursor()
         cursor.execute("select id, nom from provinces where pays_id = ?",

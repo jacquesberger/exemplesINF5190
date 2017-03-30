@@ -18,6 +18,7 @@ from flask import Flask
 from flask import render_template
 from flask import g
 from flask import jsonify
+from flask import request
 from database import Database
 
 app = Flask(__name__, static_url_path="", static_folder="static")
@@ -55,11 +56,16 @@ def villes(province_id):
     return render_template('villes.html', villes=villes)
 
 
-@app.route('/api/pays')
+@app.route('/api/pays', methods=["GET", "POST"])
 def liste_pays():
-    pays = get_db().get_pays()
-    data = [{"nom":each[1], "_id":each[0]} for each in pays]
-    return jsonify(data)
+    if request.method == "GET":
+        pays = get_db().get_pays()
+        data = [{"nom":each[1], "_id":each[0]} for each in pays]
+        return jsonify(data)
+    else:
+        data = request.get_json()
+        get_db().add_pays(data["nom"])
+        return "", 201
 
 
 @app.route('/api/provinces/<pays_id>')
