@@ -35,16 +35,18 @@ class Database:
         cursor = self.get_connection().cursor()
         cursor.execute("select id, nom from pays")
         pays = cursor.fetchall()
-        return [(un_pays[0],un_pays[1]) for un_pays in pays]
+        return [(un_pays[0], un_pays[1]) for un_pays in pays]
 
     def get_provinces(self, pays_id):
         cursor = self.get_connection().cursor()
-        cursor.execute("select id, nom from provinces where pays_id = ?", (pays_id,))
+        cursor.execute("select id, nom from provinces where pays_id = ?",
+                       (pays_id,))
         provinces = cursor.fetchall()
-        return [(une_province[0],une_province[1]) for une_province in provinces]
+        return [(prov[0], prov[1]) for prov in provinces]
 
     def get_villes(self, province_id):
         cursor = self.get_connection().cursor()
-        cursor.execute("select id, nom from villes where province_id = ?", (province_id,))
+        cursor.execute("select id, nom from villes where province_id = ?",
+                       (province_id,))
         villes = cursor.fetchall()
-        return [(une_ville[0],une_ville[1]) for une_ville in villes]
+        return [(une_ville[0], une_ville[1]) for une_ville in villes]
