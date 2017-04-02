@@ -86,7 +86,7 @@ function sendPays() {
       }
     };
 
-    xhr.open("POST", "/api/pays", true);
+    xhr.open("POST", "/api/pays/", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify({nom:pays}));
   }
