@@ -9,7 +9,7 @@ d'initiation à la programmation.
 Objectifs
 ---------
 
-* Manipuler le programme `python`.
+* Manipuler le programme `python3`.
 * Écrire du code Python.
 
 Exercice
