@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +18,7 @@ import datetime
 # Fonction sans valeur de retour
 def print_error_message(message):
     today = get_today()
-    print "Erreur", today, message
+    print("Erreur", today, message)
 
 
 # Fonction avec valeur de retour
@@ -31,4 +29,4 @@ print_error_message("Out of memory")
 
 # Fonction dans une variable
 new_function = get_today
-print new_function()
+print(new_function())

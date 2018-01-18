@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,17 +17,17 @@ une_liste = ["Pascal", "SQL", "PHP", "Python",
 
 # Boucler sur une liste
 for each in une_liste:
-    print each
+    print(each)
 
-print "Taille de la liste :", len(une_liste)
+print("Taille de la liste :", len(une_liste))
 
 # Générer une liste de valeurs et boucler dessus
 for i in range(0, 10):
-    print i
+    print(i)
 
 # Opérateur []
-print une_liste[2]
+print(une_liste[2])
 
 # Version longue de la boucle
 for i in range(0, len(une_liste)):
-    print "Élément no. %d : %s" % (i + 1, une_liste[i])
+    print("Élément no. %d : %s" % (i + 1, une_liste[i]))

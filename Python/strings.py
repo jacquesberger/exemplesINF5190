@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,23 +13,23 @@
 # limitations under the License.
 
 # Délimiteurs de chaîne
-print "Chaîne avec des caractères accentués"
-print 'Chaîne avec des caractères accentués'
-print "J'aime les fruits."
-print 'Ces élus sont "compétents", parfois!'
+print("Chaîne avec des caractères accentués")
+print('Chaîne avec des caractères accentués')
+print("J'aime les fruits.")
+print('Ces élus sont "compétents", parfois!')
 
 # Plusieurs paramètres au print (affichés avec un espace entre chacun)
 nombre_pommes = 5
-print "J'ai mangé", nombre_pommes, "pommes pour souper hier."
+print("J'ai mangé", nombre_pommes, "pommes pour souper hier.")
 
 # Formattage
-print "J'ai mangé %d pommes pour souper hier." % nombre_pommes
+print("J'ai mangé %d pommes pour souper hier." % nombre_pommes)
 
 nombre_poires = 2
 nombre_oranges = 7
 phrase = ("J'ai mangé %d pommes, %d poires "
           "et %d oranges pour déjeuner ce matin.")
-print phrase % (nombre_pommes, nombre_poires, nombre_oranges)
+print(phrase % (nombre_pommes, nombre_poires, nombre_oranges))
 
 # Multi-lignes
 longue_chaine = """
@@ -70,7 +68,7 @@ test technique et test de personnalité, multipliée par 25 candidats, pour
 un poste d'HTML élémentaire! Les coûts de recrutement de cette entreprise
 doivent être incroyables.
 """
-print longue_chaine
+print(longue_chaine)
 
 # Longueur d'une chaîne
-print "Longueur de ce texte :", len(longue_chaine)
+print("Longueur de ce texte :", len(longue_chaine))

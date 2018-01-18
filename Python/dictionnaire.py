@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,19 +14,19 @@
 
 objet = {"nom": "Berger", "prenom": "Jacques", "age": 87}
 
-print objet
+print(objet)
 
 # Accéder à un élément
-print objet["nom"]
+print(objet["nom"])
 
 # Boucler sur les valeurs
 for cle, valeur in objet.items():
-    print cle, valeur
+    print(cle, valeur)
 
 # Supprimer l'âge
 del objet["age"]
-print objet
+print(objet)
 
 # Ajouter un élément
 objet["vivant"] = False
-print objet
+print(objet)

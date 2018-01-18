@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,4 +15,4 @@
 try:
     file_handle = open("input/not_exist.txt")
 except IOError as e:
-    print "Erreur avec le fichier en lecture :", e.strerror
+    print("Erreur avec le fichier en lecture :", e.strerror)

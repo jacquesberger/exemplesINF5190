@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,10 +42,10 @@ class Teacher(Person):
         return "A Teacher Has No Name"
 
 regular_person = Person("Vince", "Neil", 51)
-print regular_person.get_complete_name()
+print(regular_person.get_complete_name())
 
 steven = Student("Steven", "Stevenson", 19, "STES12129701")
-print steven.get_complete_name()
+print(steven.get_complete_name())
 
 teacher = Teacher("Jacques", "Berger", 87, "IEPSW3")
-print teacher.get_complete_name()
+print(teacher.get_complete_name())
