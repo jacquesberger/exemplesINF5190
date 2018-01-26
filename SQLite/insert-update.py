@@ -30,6 +30,6 @@ connection.commit()
 
 cursor.execute("select nom from artiste")
 for row in cursor:
-    print row[0]
+    print(row[0])
 
 connection.close()

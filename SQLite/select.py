@@ -21,6 +21,6 @@ cursor = connection.cursor()
 cursor.execute("select * from album")
 for row in cursor:
     identifier, album, year, artiste_id, publisher_id = row
-    print "%s, %d" % (album, year)
+    print("%s, %d" % (album, year))
 
 connection.close()
