@@ -21,7 +21,7 @@ Exercices
 2. Écrivez un programme qui va afficher à l'écran la liste numérotée des artistes
    dans la BD. Lorsque l'utilisateur choisit un artiste en particulier (en
    saisissant son numéro au clavier), le programme affiche la liste des albums
-   de cet artiste (regardez la fonction `raw_input()` et `int()` pour la saisie
+   de cet artiste (regardez la fonction `input()` et `int()` pour la saisie
    au clavier).
 
 3. Le fichier [input.txt](input.txt) contient des données sur des albums de
