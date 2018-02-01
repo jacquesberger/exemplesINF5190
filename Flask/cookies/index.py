@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +17,7 @@ from flask import render_template
 from flask import g
 from flask import make_response
 from flask import request
-from database import Database
+from .database import Database
 
 app = Flask(__name__)
 

@@ -1,5 +1,3 @@
-# coding: utf8
-
 # Copyright 2017 Jacques Berger
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -45,7 +43,6 @@ class Database:
 
     def get_artist(self, identifier):
         cursor = self.get_connection().cursor()
-        print identifier
         cursor.execute(("select id, nom, est_solo, nombre_individus "
                         "from artiste where id = ?"), (identifier,))
         artist = cursor.fetchone()

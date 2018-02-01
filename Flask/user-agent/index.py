@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    print request.headers.get('User-Agent')
+    print(request.headers.get('User-Agent'))
     return """
        <html>
          <head>
