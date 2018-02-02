@@ -69,7 +69,7 @@ def formulaire_creation():
 
         # TODO Faire la validation du formulaire
         salt = uuid.uuid4().hex
-        hashed_password = hashlib.sha512(password + salt).hexdigest()
+        hashed_password = hashlib.sha512(str(password + salt).encode("utf-8")).hexdigest()
         db = get_db()
         db.create_user(username, email, salt, hashed_password)
 
