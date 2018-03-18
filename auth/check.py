@@ -18,10 +18,10 @@ import hashlib
 import sqlite3
 import uuid
 
-print "Nom d'utilisateur : "
-username = raw_input()
-print "Mot de passe : "
-password = raw_input()
+print("Nom d'utilisateur : ")
+username = input()
+print("Mot de passe : ")
+password = input()
 
 connection = sqlite3.connect('users.db')
 cursor = connection.cursor()
@@ -31,11 +31,11 @@ user = cursor.fetchone()
 connection.close()
 
 if user is None:
-    print "Utilisateur inconnu"
+    print("Utilisateur inconnu")
 else:
     salt = user[0]
-    hashed_password = hashlib.sha512(password + salt).hexdigest()
+    hashed_password = hashlib.sha512(str(password + salt).encode("utf-8")).hexdigest()
     if hashed_password == user[1]:
-        print "Accès autorisé"
+        print("Accès autorisé")
     else:
-        print "Accès refusé"
+        print("Accès refusé")
