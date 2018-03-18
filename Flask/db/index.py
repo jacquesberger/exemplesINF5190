@@ -44,7 +44,7 @@ def start_page():
 @app.route('/liste')
 def show_list():
     artists = get_db().get_artists()
-    return render_template('artistes.html', artists=artists)
+    return render_template('artistes.html', artist_names=artists)
 
 
 @app.route('/deux-listes')
