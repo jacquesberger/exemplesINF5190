@@ -28,6 +28,7 @@ class Database:
     def disconnect(self):
         if self.connection is not None:
             self.connection.close()
+            self.connection = None
 
     def get_artists(self):
         cursor = self.get_connection().cursor()
