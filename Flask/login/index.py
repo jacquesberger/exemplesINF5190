@@ -89,7 +89,7 @@ def log_user():
         return redirect("/")
 
     salt = user[0]
-    hashed_password = hashlib.sha512(password + salt).hexdigest()
+    hashed_password = hashlib.sha512(str(password + salt).encode("utf-8")).hexdigest()
     if hashed_password == user[1]:
         # Accès autorisé
         id_session = uuid.uuid4().hex
@@ -112,10 +112,9 @@ def authentication_required(f):
 @app.route('/logout')
 @authentication_required
 def logout():
-    if "id" in session:
-        id_session = session["id"]
-        session.pop('id', None)
-        get_db().delete_session(id_session)
+    id_session = session["id"]
+    session.pop('id', None)
+    get_db().delete_session(id_session)
     return redirect("/")
 
 
