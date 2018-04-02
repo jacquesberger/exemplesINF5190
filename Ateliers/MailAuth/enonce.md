@@ -16,13 +16,13 @@ Objectifs
 Exercices
 ---------
 
-1. Créez un compte [https://www.google.com/gmail/](Gmail) spécifiquement pour le
+1. Créez un compte [Gmail](https://www.google.com/gmail/) spécifiquement pour le
    cours INF3005.
 
-2. À l'aide de cet [https://github.com/jacquesberger/exemplesINF3005/blob/master/email/gmail.py](exemple),
+2. À l'aide de cet [exemple](https://github.com/jacquesberger/exemplesINF3005/blob/master/email/gmail.py),
    envoyez un courriel à partir de l'adresse créée à l'exercice précédent.
 
-3. Faites une copie de l'[https://github.com/jacquesberger/exemplesINF3005/tree/master/Flask/login](exemple de _login_) vu en classe
+3. Faites une copie de l'[exemple de _login_](https://github.com/jacquesberger/exemplesINF3005/tree/master/Flask/login) vu en classe
    et modifiez-le pour saisir le nom et le prénom de l'utilisateur lors de son
    inscription. Ensuite, lorsque l'utilisation est connecté à l'application,
    affichez-lui une salutation avec son nom complet sur la page d'accueil.
