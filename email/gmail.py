@@ -15,7 +15,7 @@
 # limitations under the License.
 
 import smtplib
-from email.mime.ultipart import MIMEMultipart
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 source_address = "source.name@gmail.com"
