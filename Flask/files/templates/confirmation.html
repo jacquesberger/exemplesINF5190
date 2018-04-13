@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Votre compte a été créé.</h1>
+  <p>Voici la liste des comptes :</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Photo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for profile in profiles %}
+        <tr>
+          <td>{{ profile.prenom }}</td>
+          <td>{{ profile.nom }}</td>
+          <td><img src="/image/{{ profile.photo }}.png" height=50 width=50></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="/">Retour à la page d'accueil</a></p>
+{% endblock %}

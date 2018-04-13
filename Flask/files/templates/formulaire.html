@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Création d'un utilisateur</h1>
+  <form action="/formulaire" method="POST" enctype="multipart/form-data">
+    <label for="champ_nom">Nom</label>&nbsp;<input type="text" id="champ_nom" name="nom" maxlength="40">
+    <br>
+    <label for="champ_prenom">Prénom</label>&nbsp;<input type="text" id="champ_prenom" name="prenom" maxlength="40">
+    <br>
+    <span>Choisir une photo</span><input type="file" name="photo" accept=".png">
+    <br>
+    <input type="submit" value="Soumettre">
+  </form>
+{% endblock %}
