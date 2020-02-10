@@ -17,12 +17,12 @@ Exercices
 ---------
 
 1. Créez un compte [https://www.google.com/gmail/](Gmail) spécifiquement pour le
-   cours INF3005.
+   cours INF5190.
 
-2. À l'aide de cet [https://github.com/jacquesberger/exemplesINF3005/blob/master/email/gmail.py](exemple),
+2. À l'aide de cet [https://github.com/jacquesberger/exemplesINF5190/blob/master/email/gmail.py](exemple),
    envoyez un courriel à partir de l'adresse créée à l'exercice précédent.
 
-3. Faites une copie de l'[https://github.com/jacquesberger/exemplesINF3005/tree/master/Flask/login](exemple de _login_) vu en classe
+3. Faites une copie de l'[https://github.com/jacquesberger/exemplesINF5190/tree/master/Flask/login](exemple de _login_) vu en classe
    et modifiez-le pour saisir le nom et le prénom de l'utilisateur lors de son
    inscription. Ensuite, lorsque l'utilisation est connecté à l'application,
    affichez-lui une salutation avec son nom complet sur la page d'accueil.

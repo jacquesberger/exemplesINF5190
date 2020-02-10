@@ -3,7 +3,7 @@ Enregistrement de mot de passe
 
 La gestion des mots de passe est une tâche délicate et complexe. La technique
 recommandée dans cet atelier est la technique avec le salt et la fonction de
-hachage, comme présenté dans cet <a href="https://github.com/jacquesberger/exemplesINF3005/blob/master/auth/insert.py">exemple</a>.
+hachage, comme présenté dans cet <a href="https://github.com/jacquesberger/exemplesINF5190/blob/master/auth/insert.py">exemple</a>.
 
 Objectifs
 ---------
