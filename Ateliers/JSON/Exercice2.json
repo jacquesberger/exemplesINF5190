@@ -1,0 +1,44 @@
+{
+  "numero_employe": 884,
+  "numero_semaine": 4,
+  "annee": 2012,
+  "jours": [
+    [{
+      "code_de_projet": 200,
+      "minutes": 90
+    }, {
+      "code_de_projet": 125,
+      "minutes": 45
+    }, {
+      "code_de_projet": 990,
+      "minutes": 180
+    }, {
+      "code_de_projet": 166,
+      "minutes": 100
+    }],
+    [{
+      "code_de_projet": 125,
+      "minutes": 420
+    }],
+    [{
+      "code_de_projet": 125,
+      "minutes": 420
+    }],
+    [{
+      "code_de_projet": 125,
+      "minutes": 420
+    }, {
+      "code_de_projet": 116,
+      "minutes": 50
+    }],
+    [{
+      "code_de_projet": 166,
+      "minutes": 420
+    }],
+    [],
+    [{
+      "code_de_projet": 990,
+      "minutes": 30
+    }]
+  ]
+}

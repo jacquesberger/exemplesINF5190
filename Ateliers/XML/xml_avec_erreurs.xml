@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<library>
+  <documents>
+    <document type="book">
+      <title>Théorie de la musique</title>
+      <author>A. Danhauser</author>
+      <year><1996</year>
+    </document>
+    <document type=book>
+      <title>Test-Driven Development by Example</title>
+      <author>Kent Beck</author>
+      <year>2003</year>
+    </document>
+    <document type="book">
+      <title>Design Patterns - Elements of Reusable Object-Oriented Software</title>
+      <author>Erich Gamma</author>
+      <author>Richard Helm</author>
+      <author>Ralph Johnson</author>
+      <author>John Vlissides</author>
+      <year>1995</year>
+    </document>
+    <document type="article'>
+      <title>XML Schema</title>
+      <author>Eric van der Vlist</author>
+      <year>2001</year>
+  </document>
+</library>

@@ -1,0 +1,21 @@
+{
+  "nom": "Berger",
+  "prenom": "Jacques",
+  "assurance_maladie": "BERJ12052304",
+  "naissance": "1912-05-23",
+  "medecin_famille": {
+    "nom": "Stevenson",
+    "prenom": "Steven",
+    "identifiant": "234F3",
+    "ville": "Sherbrooke"
+  },
+  "visites": [{
+    "date": "2016-09-01",
+    "sujet": "Suivi annuel",
+    "description": "Rien à signaler. Renouvellement de la prescription de morphine."
+  }, {
+    "date": "2016-09-03",
+    "sujet": "Blessure au dos",
+    "description": "Entorse lombaire. Prescription d'anti-inflammatoires."
+  }]
+}

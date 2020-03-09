@@ -1,0 +1,22 @@
+[{
+  "sigle": "INF4375",
+  "groupe": 50,
+  "trimestre": 3,
+  "annee": 2016,
+  "enseignant": "Jacques Berger",
+  "note": "A+"
+}, {
+  "sigle": "INF2015",
+  "groupe": 30,
+  "trimestre": 1,
+  "annee": 2016,
+  "enseignant": "Jacques Berger",
+  "note": "A-"
+}, {
+  "sigle": "INF1256",
+  "groupe": 21,
+  "trimestre": 2,
+  "annee": 2015,
+  "enseignant": "François-Xavier Guillemette",
+  "note": "A"
+}]
