@@ -78,3 +78,10 @@ types:
                 type: ExistingPerson
           404:
             description: The specified identifier does not exist.
+      delete:
+        description: Delete completely the data of a person, specified by it's id.
+        responses:
+          200:
+            description: The person was deleted successfully.
+          404:
+            description: The specified identifier does not exist.

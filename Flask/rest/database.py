@@ -60,3 +60,8 @@ class Database:
             connection.execute("update person set lastname = ?, firstname = ?, age = ? where rowid = ?", (person.lastname, person.firstname, person.age, person.id))
             connection.commit()
         return person
+    
+    def delete_person(self, person):
+        connection = self.get_connection()
+        connection.execute("delete from person where rowid = ?", (person.id,))
+        connection.commit()

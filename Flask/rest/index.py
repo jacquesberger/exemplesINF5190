@@ -84,3 +84,12 @@ def modify_person(id):
         person.age = data["age"]
         get_db().save_person(person)
         return jsonify(person.asDictionary())
+
+@app.route('/api/person/<id>', methods=["DELETE"])
+def delete_person(id):
+    person = get_db().read_one_person(id)
+    if person is None:
+        return "", 404
+    else:
+        get_db().delete_person(person)
+        return "", 200
