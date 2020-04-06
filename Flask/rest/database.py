@@ -34,11 +34,13 @@ class Database:
         cursor = self.get_connection().cursor()
         cursor.execute("select rowid, lastname, firstname, age from person")
         persons = cursor.fetchall()
-        return [Person(one_person[0], one_person[1], one_person[2], one_person[3]) for one_person in persons]
+        return [Person(one_person[0], one_person[1], one_person[2],
+                       one_person[3]) for one_person in persons]
 
     def read_one_person(self, id):
         cursor = self.get_connection().cursor()
-        cursor.execute("select rowid, lastname, firstname, age from person where rowid = ?", (id,))
+        cursor.execute("select rowid, lastname, firstname, "
+                       "age from person where rowid = ?", (id,))
         persons = cursor.fetchall()
         if len(persons) is 0:
             return None
@@ -49,7 +51,9 @@ class Database:
     def save_person(self, person):
         connection = self.get_connection()
         if person.id is None:
-            connection.execute("insert into person(lastname, firstname, age) values(?, ?, ?)", (person.lastname, person.firstname, person.age))
+            connection.execute("insert into person(lastname, firstname, age) "
+                               "values(?, ?, ?)",
+                               (person.lastname, person.firstname, person.age))
             connection.commit()
 
             cursor = connection.cursor()
@@ -57,10 +61,13 @@ class Database:
             result = cursor.fetchall()
             person.id = result[0][0]
         else:
-            connection.execute("update person set lastname = ?, firstname = ?, age = ? where rowid = ?", (person.lastname, person.firstname, person.age, person.id))
+            connection.execute("update person set lastname = ?, firstname = ?,"
+                               "age = ? where rowid = ?",
+                               (person.lastname, person.firstname, person.age,
+                                person.id))
             connection.commit()
         return person
-    
+
     def delete_person(self, person):
         connection = self.get_connection()
         connection.execute("delete from person where rowid = ?", (person.id,))

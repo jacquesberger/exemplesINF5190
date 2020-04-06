@@ -21,4 +21,7 @@ class Person:
         self.age = age
 
     def asDictionary(self):
-        return {"id": self.id, "lastname": self.lastname, "firstname": self.firstname, "age": self.age}
+        return {"id": self.id,
+                "lastname": self.lastname,
+                "firstname": self.firstname,
+                "age": self.age}

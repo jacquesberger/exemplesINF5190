@@ -27,6 +27,7 @@ from .schemas import person_update_schema
 app = Flask(__name__, static_url_path="", static_folder="static")
 schema = JsonSchema(app)
 
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -43,7 +44,9 @@ def close_connection(exception):
 
 @app.errorhandler(JsonValidationError)
 def validation_error(e):
-    return jsonify({ 'error': e.message, 'errors': [validation_error.message for validation_error  in e.errors]}), 400
+    errors = [validation_error.message for validation_error in e.errors]
+    return jsonify({'error': e.message, 'errors': errors}), 400
+
 
 @app.route('/')
 def documentation():
@@ -58,10 +61,12 @@ def create_person():
     person = get_db().save_person(person)
     return jsonify(person.asDictionary()), 201
 
+
 @app.route('/api/person', methods=["GET"])
 def get_persons():
     persons = get_db().read_all_persons()
     return jsonify([person.asDictionary() for person in persons])
+
 
 @app.route('/api/person/<id>', methods=["GET"])
 def get_person(id):
@@ -70,6 +75,7 @@ def get_person(id):
         return "", 404
     else:
         return jsonify(person.asDictionary())
+
 
 @app.route('/api/person/<id>', methods=["PUT"])
 @schema.validate(person_update_schema)
@@ -84,6 +90,7 @@ def modify_person(id):
         person.age = data["age"]
         get_db().save_person(person)
         return jsonify(person.asDictionary())
+
 
 @app.route('/api/person/<id>', methods=["DELETE"])
 def delete_person(id):
