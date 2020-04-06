@@ -66,3 +66,15 @@ types:
                 type: ExistingPerson
           404:
             description: The specified identifier does not exist.
+      put:
+        description: Modify the data of one person, specified by it's id. It is not possible to change the id.
+        body:
+          application/json:
+            type: ExistingPerson
+        responses:
+          200:
+            body:
+              application/json:
+                type: ExistingPerson
+          404:
+            description: The specified identifier does not exist.

@@ -28,3 +28,23 @@ person_insert_schema = {
   },
   'additionalProperties': False
 }
+
+person_update_schema = {
+  'type': 'object',
+  'required': ['firstname', 'lastname', 'age', 'id'],
+  'properties': {
+    'id': {
+        'type': 'number'
+    },
+    'firstname': {
+      'type': 'string'
+    },
+    'lastname': {
+      'type': 'string'
+    },
+    'age': {
+      'type': 'number'
+    }
+  },
+  'additionalProperties': False
+}

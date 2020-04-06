@@ -48,11 +48,15 @@ class Database:
 
     def save_person(self, person):
         connection = self.get_connection()
-        connection.execute("insert into person(lastname, firstname, age) values(?, ?, ?)", (person.lastname, person.firstname, person.age))
-        connection.commit()
+        if person.id is None:
+            connection.execute("insert into person(lastname, firstname, age) values(?, ?, ?)", (person.lastname, person.firstname, person.age))
+            connection.commit()
 
-        cursor = connection.cursor()
-        cursor.execute("select last_insert_rowid()")
-        result = cursor.fetchall()
-        person.id = result[0][0]
+            cursor = connection.cursor()
+            cursor.execute("select last_insert_rowid()")
+            result = cursor.fetchall()
+            person.id = result[0][0]
+        else:
+            connection.execute("update person set lastname = ?, firstname = ?, age = ? where rowid = ?", (person.lastname, person.firstname, person.age, person.id))
+            connection.commit()
         return person

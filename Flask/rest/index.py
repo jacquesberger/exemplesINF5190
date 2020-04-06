@@ -22,6 +22,7 @@ from .person import Person
 from flask_json_schema import JsonSchema, JsonValidationError
 import json
 from .schemas import person_insert_schema
+from .schemas import person_update_schema
 
 app = Flask(__name__, static_url_path="", static_folder="static")
 schema = JsonSchema(app)
@@ -68,4 +69,18 @@ def get_person(id):
     if person is None:
         return "", 404
     else:
+        return jsonify(person.asDictionary())
+
+@app.route('/api/person/<id>', methods=["PUT"])
+@schema.validate(person_update_schema)
+def modify_person(id):
+    person = get_db().read_one_person(id)
+    if person is None:
+        return "", 404
+    else:
+        data = request.get_json()
+        person.lastname = data["lastname"]
+        person.firstname = data["firstname"]
+        person.age = data["age"]
+        get_db().save_person(person)
         return jsonify(person.asDictionary())
