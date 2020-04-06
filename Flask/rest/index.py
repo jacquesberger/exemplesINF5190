@@ -14,13 +14,15 @@
 
 from flask import Flask
 from flask import g
-from flask import request
 from flask import jsonify
 from flask import render_template
+from flask import request
+from flask_json_schema import JsonSchema
+from flask_json_schema import JsonValidationError
+import json
+
 from .database import Database
 from .person import Person
-from flask_json_schema import JsonSchema, JsonValidationError
-import json
 from .schemas import person_insert_schema
 from .schemas import person_update_schema
 
