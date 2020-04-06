@@ -14,6 +14,7 @@
 
 
 import sqlite3
+from .person import Person
 
 
 class Database:
@@ -29,11 +30,11 @@ class Database:
         if self.connection is not None:
             self.connection.close()
 
-    # def get_personnes(self):
-        # cursor = self.get_connection().cursor()
-        # cursor.execute("select id, nom, prenom from personne")
-        # personnes = cursor.fetchall()
-        # return [(un_pays[0], un_pays[1]) for un_pays in pays]
+    def read_all_persons(self):
+        cursor = self.get_connection().cursor()
+        cursor.execute("select rowid, lastname, firstname, age from person")
+        persons = cursor.fetchall()
+        return [Person(one_person[0], one_person[1], one_person[2], one_person[3]) for one_person in persons]
 
     def save_person(self, person):
         connection = self.get_connection()

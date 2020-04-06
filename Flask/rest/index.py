@@ -56,3 +56,8 @@ def create_person():
     person = Person(None, data["lastname"], data["firstname"], data["age"])
     person = get_db().save_person(person)
     return jsonify(person.asDictionary()), 201
+
+@app.route('/api/person', methods=["GET"])
+def get_persons():
+    persons = get_db().read_all_persons()
+    return jsonify([person.asDictionary() for person in persons])

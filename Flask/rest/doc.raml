@@ -29,6 +29,13 @@ types:
         required: true
 /api:
   /person:
+    get:
+      description: Extract all the persons.
+      responses:
+        200:
+          body:
+            application/json:
+              type: ExistingPerson[]
     post:
       description: Create a new person.
       body:
