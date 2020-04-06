@@ -1,0 +1,51 @@
+#%RAML 1.0
+title: Example of REST API for INF5190
+mediaType: application/json
+types:
+  NewPerson:
+    properties:
+      lastname:
+        type: string
+        required: true
+      firstname:
+        type: string
+        required: true
+      age:
+        type: number
+        required: true
+  ExistingPerson:
+    properties:
+      id:
+        type: string
+        required: true
+      lastname:
+        type: string
+        required: true
+      firstname:
+        type: string
+        required: true
+      age:
+        type: number
+        required: true
+/api:
+  /person:
+    post:
+      description: Create a new person.
+      body:
+        application/json:
+          type: NewPerson
+          example:
+            lastname: Jackson
+            firstname: Michael
+            age: 54
+      responses:
+        201:
+          description: The person was successfully created.
+          body:
+            application/json:
+              type: ExistingPerson
+              example:
+                id: 5
+                lastname: Jackson
+                firstname: Michael
+                age: 54
