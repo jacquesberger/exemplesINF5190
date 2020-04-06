@@ -13,38 +13,38 @@
 # limitations under the License.
 
 person_insert_schema = {
-  'type': 'object',
-  'required': ['firstname', 'lastname', 'age'],
-  'properties': {
-    'firstname': {
-      'type': 'string'
+    'type': 'object',
+    'required': ['firstname', 'lastname', 'age'],
+    'properties': {
+        'firstname': {
+            'type': 'string'
+        },
+        'lastname': {
+            'type': 'string'
+        },
+        'age': {
+            'type': 'number'
+        }
     },
-    'lastname': {
-      'type': 'string'
-    },
-    'age': {
-      'type': 'number'
-    }
-  },
-  'additionalProperties': False
+    'additionalProperties': False
 }
 
 person_update_schema = {
-  'type': 'object',
-  'required': ['firstname', 'lastname', 'age', 'id'],
-  'properties': {
-    'id': {
-        'type': 'number'
+    'type': 'object',
+    'required': ['firstname', 'lastname', 'age', 'id'],
+    'properties': {
+        'id': {
+            'type': 'number'
+        },
+        'firstname': {
+            'type': 'string'
+        },
+        'lastname': {
+            'type': 'string'
+        },
+        'age': {
+            'type': 'number'
+        }
     },
-    'firstname': {
-      'type': 'string'
-    },
-    'lastname': {
-      'type': 'string'
-    },
-    'age': {
-      'type': 'number'
-    }
-  },
-  'additionalProperties': False
+    'additionalProperties': False
 }
