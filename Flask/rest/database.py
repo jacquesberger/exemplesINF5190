@@ -36,6 +36,16 @@ class Database:
         persons = cursor.fetchall()
         return [Person(one_person[0], one_person[1], one_person[2], one_person[3]) for one_person in persons]
 
+    def read_one_person(self, id):
+        cursor = self.get_connection().cursor()
+        cursor.execute("select rowid, lastname, firstname, age from person where rowid = ?", (id,))
+        persons = cursor.fetchall()
+        if len(persons) is 0:
+            return None
+        else:
+            person = persons[0]
+            return Person(person[0], person[1], person[2], person[3])
+
     def save_person(self, person):
         connection = self.get_connection()
         connection.execute("insert into person(lastname, firstname, age) values(?, ?, ?)", (person.lastname, person.firstname, person.age))

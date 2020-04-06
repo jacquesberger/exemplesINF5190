@@ -30,7 +30,7 @@ types:
 /api:
   /person:
     get:
-      description: Extract all the persons.
+      description: Extract the data of all the persons.
       responses:
         200:
           body:
@@ -56,3 +56,13 @@ types:
                 lastname: Jackson
                 firstname: Michael
                 age: 54
+    /{id}:
+      get:
+        description: Extract the data of one person, specified by it's id.
+        responses:
+          200:
+            body:
+              application/json:
+                type: ExistingPerson
+          404:
+            description: The specified identifier does not exist.

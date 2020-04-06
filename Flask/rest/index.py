@@ -61,3 +61,11 @@ def create_person():
 def get_persons():
     persons = get_db().read_all_persons()
     return jsonify([person.asDictionary() for person in persons])
+
+@app.route('/api/person/<id>', methods=["GET"])
+def get_person(id):
+    person = get_db().read_one_person(id)
+    if person is None:
+        return "", 404
+    else:
+        return jsonify(person.asDictionary())
