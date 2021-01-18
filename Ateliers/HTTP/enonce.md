@@ -21,7 +21,7 @@ Exercices
 3. À partir de l'adresse de l'[horaire de l'UQAM](https://etudier.uqam.ca/trouver-un-cours), trouvez
    l'URL (et ses paramètres) nécessaire pour obtenir l'horaire du cours INF5190.
 
-4. Modifiez l'URL de l'exercice #4 afin d'obtenir directement l'horaire du cours
+4. Modifiez l'URL de l'exercice #3 afin d'obtenir directement l'horaire du cours
    INF2050. Essayez de retirer un ou plusieurs paramètres ou de changer leur
    valeur pour voir le résultat.
 
