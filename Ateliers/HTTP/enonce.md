@@ -14,7 +14,7 @@ Objectifs
 Exercices
 ---------
 
-1. Quel type de serveur sert le site [rds.ca](http://rds.ca/)?
+1. Quel type de serveur sert le site [uqam.ca](http://www.uqam.ca/)?
 
 2. Quel est l'encodage de caractères retourné par le site [uqam.ca](http://www.uqam.ca/)?
 
@@ -25,5 +25,5 @@ Exercices
    INF2050. Essayez de retirer un ou plusieurs paramètres ou de changer leur
    valeur pour voir le résultat.
 
-5. Capturez votre code permanent et votre mot de passe (utilisez un faux) dans
-   la requête HTTP qui fait l'authentification au [Portail étudiant](https://portailetudiant.uqam.ca/).
+5. Capturez les paramètres d'authentification (utilisez des fausses données) dans
+   la requête HTTP qui fait l'authentification à l'adresse [Évaluation UQAM - volet enseignant](https://www.apps.uqam.ca/application/evalens/login/login.aspx?EVL_TYPE_UTILISATEUR=ENS).
