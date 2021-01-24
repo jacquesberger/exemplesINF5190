@@ -41,6 +41,7 @@ class Teacher(Person):
     def get_complete_name(self):
         return "A Teacher Has No Name"
 
+
 regular_person = Person("Vince", "Neil", 51)
 print(regular_person.get_complete_name())
 
