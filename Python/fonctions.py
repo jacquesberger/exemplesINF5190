@@ -25,6 +25,7 @@ def print_error_message(message):
 def get_today():
     return datetime.date.today()
 
+
 print_error_message("Out of memory")
 
 # Fonction dans une variable

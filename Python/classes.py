@@ -24,6 +24,7 @@ class Person(object):
     def set_age(self, age):
         self.age = age
 
+
 teacher = Person("Jacques", "Berger")
 print(teacher.firstname)
 print(teacher.get_complete_name())
