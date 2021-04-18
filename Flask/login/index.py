@@ -82,10 +82,12 @@ def log_user():
     password = request.form["password"]
     # Vérifier que les champs ne sont pas vides
     if username == "" or password == "":
+        # TODO Faire la gestion de l'erreur
         return redirect("/")
 
     user = get_db().get_user_login_info(username)
     if user is None:
+        # TODO Faire la gestion de l'erreur
         return redirect("/")
 
     salt = user[0]
@@ -97,6 +99,7 @@ def log_user():
         session["id"] = id_session
         return redirect("/")
     else:
+        # TODO Faire la gestion de l'erreur
         return redirect("/")
 
 
@@ -119,12 +122,13 @@ def logout():
 
 
 def is_authenticated(session):
+    # TODO Next-level : Vérifier la session dans la base de données
     return "id" in session
 
 
 def send_unauthorized():
     return Response('Could not verify your access level for that URL.\n'
-                    'You have to login with proper credentials', 401,
+                    'You have to login with proper credentials.', 401,
                     {'WWW-Authenticate': 'Basic realm="Login Required"'})
 
 
