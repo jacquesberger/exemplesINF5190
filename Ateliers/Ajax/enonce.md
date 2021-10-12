@@ -5,7 +5,7 @@ Le paradigme Ajax est très répandu en développement web. Il permet, entre aut
 d'améliorer significativement la convivialité des applications web.
 
 Dans cet atelier, il n'est pas permis d'utiliser de librairies simplifiant la
-gestion des requêtes Ajax. Il faut donc utiliser l'objet XMLHttpRequest.
+gestion des requêtes Ajax. Il faut donc utiliser la fonction fetch.
 
 Objectif
 --------
