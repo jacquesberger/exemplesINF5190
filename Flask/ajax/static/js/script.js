@@ -45,28 +45,23 @@ function onPaysChange() {
 
 // Lancée lorsque la province change. Met la liste des villes à jour.
 function onProvinceChange() {
-  var champVille = document.getElementById("champ-ville");
+  let champVille = document.getElementById("champ-ville");
 
-  var province = document.getElementById("champ-province").value;
+  const province = document.getElementById("champ-province").value;
   if (province === "") {
     champVille.value = "";
     champVille.disabled = true;
   } else {
     champVille.disabled = false;
 
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          champVille.innerHTML = xhr.responseText;
-          champVille.value = "";
-        } else {
-          console.log('Erreur avec le serveur');
-        }
-      }
-    };
-
-    xhr.open("GET", "/villes/"+province, true);
-    xhr.send();
+    fetch("/villes/"+province)
+      .then(response => response.text())
+      .then(response => {
+        champVille.innerHTML = response;
+        champVille.value = "";
+      })
+      .catch(err => {
+        console.log("Erreur avec le serveur :", err);
+      });
   }
 }
