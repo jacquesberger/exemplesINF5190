@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>Identité</title>
-<script src="/js/script.js"></script>
 </head>
 <body>
 	<form action="/envoyer" method="post">
@@ -25,7 +24,7 @@
 					<td><label for="champ-pays">Pays :</label>
 					</td>
 					<td>
-            <select id="champ-pays" name="pays" onchange="onPaysChange();">
+            <select id="champ-pays" name="pays">
               <option value="">Aucun</option>
                 {% for un_pays in pays %}
                   <option value="{{ un_pays[0] }}">{{ un_pays[1] }}</li>
@@ -37,7 +36,7 @@
 					<td><label for="champ-province">Province :</label>
 					</td>
 					<td>
-            <select id="champ-province" name="province" onchange="onProvinceChange();" disabled>
+            <select id="champ-province" name="province" disabled>
               <option value="">Aucune</option>
             </select>
 					</td>
@@ -56,5 +55,6 @@
 			<input type="submit" value="Envoyer">
 		</div>
 	</form>
+  <script src="/js/script.js"></script>
 </body>
 </html>

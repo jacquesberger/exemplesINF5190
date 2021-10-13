@@ -65,3 +65,6 @@ function onProvinceChange() {
       });
   }
 }
+
+document.getElementById("champ-pays").addEventListener("change", onPaysChange);
+document.getElementById("champ-province").addEventListener("change", onProvinceChange);
