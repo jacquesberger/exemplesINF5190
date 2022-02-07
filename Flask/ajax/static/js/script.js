@@ -13,6 +13,7 @@
 // limitations under the License.
 
 // Lancée lorsque le champ de pays change. Met à jour la liste des provinces.
+// Exemple avec xhr.
 function onPaysChange() {
   var champProvince = document.getElementById("champ-province");
 
@@ -44,6 +45,7 @@ function onPaysChange() {
 }
 
 // Lancée lorsque la province change. Met la liste des villes à jour.
+// Exemple avec fetch.
 function onProvinceChange() {
   let champVille = document.getElementById("champ-ville");
 
